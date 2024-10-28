@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hercules Gym - Join Us</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ewert&family=Jost:ital,wght@0,100..900;1,100..900&family=Pirata+One&family=Rye&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(to right, #392d69, #b57bee);
+            padding: 10px 20px;
+            color: #FFD700;
+            position: relative;
+            font-size: 16px;
+        }
+
+        header .logo img {
+            height: 70px;
+            width: auto;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+            justify-content: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 25px;
+        }
+
+        .join-button {
+            background-color: #914FDF;
+            color: white;
+            padding: 10px 20px; 
+            border-radius: 20px;
+            text-decoration: none;
+            margin-left: 10px; 
+            font-size: 16px; 
+        }
+
+        .hero {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: center;
+            height: 500px;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .hero-text {
+            position: relative;
+            flex: 1; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            background-image: url('https://as2.ftcdn.net/v2/jpg/01/14/45/49/1000_F_114454908_KfdEXCZ2anOmCICqBYEAykckGtMjr241.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100%;
+            color: white;
+        }
+
+        .hero-text::before {
+            content: ''; 
+            position: absolute; 
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0; 
+            background: linear-gradient(to bottom right, rgba(255, 0, 0, 0.5), rgba(0, 0, 255, 0.5));
+            z-index: 1; 
+        }
+
+        .hero-text h1 {
+            font-family: "Pirata One", system-ui;
+            position: relative; 
+            z-index: 2; 
+            text-align: left; 
+            font-size: 60px; 
+            color: #F3C623; 
+        }
+
+        .hero-text p {
+            position: relative; 
+            z-index: 2; 
+            text-align: left; 
+            font-size: 30px; 
+            color: white; 
+        }
+
+        .hero-text .join-btn {
+            background-color: #914FDF; 
+            color: white;
+            padding: 10px 50px; 
+            border-radius: 20px;
+            text-decoration: none;
+            margin-top: 10px; 
+            font-size: 24px; 
+            display: inline-block; 
+            transition: background-color 0.3s; 
+        }
+
+        .hero-text .join-btn:hover {
+            background-color: #763baf; 
+        }
+
+        .hero-image {
+            flex: 1; 
+            display: flex; 
+            justify-content: center; 
+            align-items: stretch;
+            padding: 0; 
+            margin: 0; 
+        }
+
+        .hero-image img {
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+            margin: 0; 
+        }
+
+        .info-section {
+            background-color: #fff;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .info-section h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+
+        .info-section ul {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-content: center;
+            justify-items: center;
+            gap: 15px;
+            list-style: none;
+            padding: 0;
+        }
+
+        .info-section ul li {
+            font-size: 1.2rem;
+            text-align: center;
+        }
+
+        .info-section ul li::before {
+            content: '✔'; 
+            color: purple; 
+            margin-right: 10px; 
+            font-size: 1.5rem; 
+        }
+
+        footer {
+            background-color: #2D2D2D;
+            color: white;
+            padding: 15px; 
+            display: flex;
+            flex-direction: column; 
+            align-items: center; 
+            text-align: center; 
+            margin-top: auto; 
+        }
+
+        footer .footer-content {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1200px; 
+            flex-wrap: wrap;
+        }
+
+        footer .customer-support,
+        footer .contact,
+        footer .social-media {
+            width: 30%;
+            margin-bottom: 10px; 
+        }
+
+        footer .social-media a img {
+            width: 25px;
+            margin-right: 10px;
+        }
+
+        footer .footer-bottom {
+            margin-top: 10px; 
+        }
+
+        footer a {
+            color: white; 
+            text-decoration: none; 
+        }
+
+        footer a:hover {
+            text-decoration: underline; 
+        }
+
+        .registration-container {
+            background-color: white;
+            padding: 30px; 
+            margin: 40px auto; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2); 
+            max-width: 600px; 
+        }
+
+        .registration-container h2 {
+            margin-bottom: 20px;
+            text-align: center; 
+            font-size: 24px; 
+            color: #392d69; 
+        }
+
+        .registration-container label {
+            display: block; 
+            margin-bottom: 5px; 
+            font-weight: bold; 
+            color: #392d69; 
+        }
+
+        .registration-container input[type="text"],
+        .registration-container input[type="email"],
+        .registration-container input[type="tel"],
+        .registration-container input[type="number"] {
+            width: 100%; 
+            padding: 12px; 
+            margin-bottom: 15px; 
+            border: 1px solid #ccc; 
+            border-radius: 4px; 
+            font-size: 16px; 
+        }
+
+        .registration-container input[type="submit"] {
+            background-color: #914FDF; 
+            color: white; 
+            padding: 12px; 
+            border: none; 
+            border-radius: 20px; 
+            cursor: pointer; 
+            font-size: 18px; 
+            transition: background-color 0.3s; 
+        }
+
+        .registration-container input[type="submit"]:hover {
+            background-color: #763baf; 
+        }
+
+        .popup {
+            display: none; 
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000; 
+        }
+
+        .popup-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            max-width: 400px;
+            margin: auto;
+        }
+
+        .close-btn {
+            background-color: #914FDF;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .close-btn:hover {
+            background-color: #763baf; 
+        }
+
+        @media (max-width: 768px) {
+            .registration-container {
+                width: 90%; 
+            }
+        }
+
+        h2{
+            color: #F3C623;
+        }
+    </style>
+    <script>
+        function showPopup() {
+            document.getElementById("popup").style.display = "flex";
+        }
+
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+        }
+
+        function handleSubmit(event) {
+            event.preventDefault(); 
+            showPopup(); 
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="HerculesLogo.png" alt="Hercules Gym Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Hercurles_TrainingProgram.html">Training Program</a></li>
+                <li><a href="Hercurles_WhyJoin.html">Why Join</a></li>
+                <li><a href="Hercurles_AboutUs.html">About Us</a></li>
+            </ul>
+        </nav>
+        <a href="#" class="join-button">JOIN US</a>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1 style="padding: 0 150px;">START YOUR FITNESS JOURNEY, CREATE YOUR OWN LEGACY.</h1>
+            <p style="padding: 0 150px;">Start training now just by simply inquiring and join us alongside of everyone's journey. Ready to start?</p>
+            <a href="#" class="join-btn">JOIN US</a>
+        </div>
+        <div class="hero-image">
+            <img src="https://media.istockphoto.com/id/1448292622/photo/personal-trainer-in-gym-portrait-of-man-from-healthy-lifestyle-and-fitness-motivation-of.jpg?s=170667a&w=0&k=20&c=jIrC7zYQzW1Crf9_lGSH7kbKpgJpBr5zdChijF7pLMg=" alt="Person working out">
+        </div>
+    </section>
+
+    <section class="info-section">
+        <h2>THE RIGHT GYM TO BE LIKE HERCULES</h2>
+        <ul>
+            <li>1,000+ Gym Open</li>
+            <li>Access Multiple Equipments</li>
+            <li>Open 24/7</li>
+            <li>Free Coaching</li>
+            <li>Can visit as Guest</li>
+            <li>Free Consultation</li>
+            <li>Workout with Gymbro</li>
+            <li>Personal Instructors</li>
+            <li>Affordable Membership</li>
+        </ul>
+    </section>
+    <div class="registration-container">
+        <h2>Registration Form</h2>
+        <form onsubmit="handleSubmit(event)">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+            <label for="credit-card">Credit Card Info:</label>
+            <input type="text" id="credit-card" name="credit-card" required placeholder="1234 5678 9012 3456">
+            <label for="membership-price">Membership Price:</label>
+            <input type="text" id="membership-price" name="membership-price" value="$30/month" readonly>
+            <input type="submit" value="Register Now">
+        </form>
+    </div>
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <p>Thank You For Registering! Wait for your call to confirm your registration.</p>
+            <button class="close-btn" onclick="closePopup()">Close</button>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <div class="customer-support">
+                <h4>Customer Support</h4>
+                <p><a href="#">FAQ</a></p>
+                <p><a href="#">Contact Us</a></p>
+                <p><a href="#">Privacy Policy</a></p>
+            </div>
+            <div class="contact">
+                <h4>Contact Us</h4>
+                <p>Email: info@herculesgym.com</p>
+                <p>Phone: +1 (555) 012-3456</p>
+            </div>
+            <div class="social-media">
+                <h4>Follow Us</h4>
+                <a href="#"><img src="https://thumbs.dreamstime.com/b/facebook-logo-vector-eps-file-squared-coloured-easily-editable-have-white-background-high-resolution-255557233.jpg" alt="Facebook"></a>
+                <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png" alt="Instagram"></a>
+                <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" alt="YouTube"></a>
+                <a href="#"><img src="https://cdn-icons-png.flaticon.com/256/3938/3938028.png" alt="Twitter"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Hercules Gym. All rights reserved.</p>
+            <p>Made by Bernarte, Karl Shane Y.</p>
+        </div>
+    </footer>
+</body>
+</html>

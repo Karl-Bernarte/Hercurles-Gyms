@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hercules - Why Join</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-image: linear-gradient(to bottom right, rgba(255, 0, 0, 0.5), rgba(0, 0, 255, 0.5)), url('https://as2.ftcdn.net/v2/jpg/01/14/45/49/1000_F_114454908_KfdEXCZ2anOmCICqBYEAykckGtMjr241.jpg');
+            background-size: cover; 
+            background-position: center; 
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(to right, #392d69, #b57bee);
+            padding: 10px 20px; 
+            color: #fff;
+        }
+
+        header .logo img {
+            height: 70px; 
+            width: auto; 
+            margin-right: 10px; 
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 10px; 
+        }
+
+        nav ul li {
+            margin: 0 5px; 
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 25px; 
+        }
+
+        .join-button {
+            background-color: #914FDF;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            margin-left: 10px; 
+            font-size: 16px; 
+        }
+
+        main {
+            flex: 1;
+            padding: 50px;
+            text-align: center;
+        }
+
+        .hero-whyjoin {
+            background-color: #f9f9f9;
+            padding: 40px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 50px;
+        }
+
+        .hero-whyjoin .hero-images {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .hero-whyjoin .hero-images img {
+            width: 100%; 
+            height: 300px; 
+            object-fit: cover; 
+            border-radius: 10px;
+        }
+
+        .hero-whyjoin h2 {
+            font-size: 36px;
+            color: #43247a;
+            margin-bottom: 20px;
+        }
+
+        .hero-whyjoin p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .feature {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .feature img {
+            width: 200px;
+            height: 70%;
+        }
+
+        .feature h3 {
+            font-size: 24px;
+            color: #43247a;
+            margin-bottom: 10px;
+        }
+
+        .feature p {
+            font-size: 16px;
+            color: #000000;
+        }
+
+        footer {
+            background-color: #2D2D2D;
+            color: white;
+            padding: 15px; 
+            display: flex;
+            flex-direction: column; 
+            align-items: center; 
+            text-align: center; 
+            margin-top: auto; 
+        }
+
+        footer .footer-content {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1200px; 
+            flex-wrap: wrap;
+        }
+
+        footer .customer-support,
+        footer .contact,
+        footer .social-media {
+            width: 30%;
+            margin-bottom: 10px; 
+        }
+
+        footer .social-media a img {
+            width: 25px;
+            margin-right: 10px;
+        }
+
+        footer .footer-bottom {
+            margin-top: 10px; 
+        }
+
+        footer a {
+            color: white; 
+            text-decoration: none; 
+        }
+
+        footer a:hover {
+            text-decoration: underline; 
+        }
+
+        @media (max-width: 1024px) {
+            .hero-whyjoin .hero-images {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .features {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul {
+                flex-direction: column;
+                margin-top: 10px;
+            }
+
+            .hero-whyjoin .hero-images {
+                grid-template-columns: 1fr;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+
+            footer {
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            footer .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="HerculesLogo.png" alt="Hercules Gym Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Hercurles_TrainingProgram.html">Training Program</a></li>
+                <li><a href="Hercurles_WhyJoin.html">Why Join</a></li>
+                <li><a href="Hercurles_AboutUs.html">About Us</a></li>
+            </ul>
+        </nav>
+        <a href="Hercules_JoinUs.html" class="join-button">JOIN US</a>
+    </header>
+    <main>
+        <section class="hero-whyjoin">
+            <div class="hero-images">
+                <img src="https://i0.wp.com/goldsgym.in/wp-content/uploads/2023/12/compress-strong-man-training-gym-min-scaled.jpg?fit=2560%2C1707&ssl=1" alt="Gym Group 1">
+                <img src="https://media.istockphoto.com/id/1395337483/photo/sports-and-gym-activities.jpg?s=612x612&w=0&k=20&c=lev6DFIvb5CVjdxSxuURswdZYLNHZPT4Y44iUkgm2q4=" alt="Gym Group 2">
+                <img src="https://t4.ftcdn.net/jpg/03/00/88/43/360_F_300884326_v10LRTYVQs5XrVNPxNBI2MKUNbUPQZYB.jpg" alt="Gym Group 3">
+            </div>
+            <div style="padding: 0 300px;"> 
+                <h2>Benefit from what we could offer with no other gym can.</h2>
+                <p>Inquire about your own gym membership</p>
+                <p>
+                    Hercules Gym offers a unique blend of cutting-edge equipment, personalized training programs, and a supportive community dedicated to helping you achieve your fitness goals. Experience a motivating environment where every member's progress is celebrated and every workout is designed to push you towards success.
+                </p>
+            </div>
+        </section>
+        <section class="features">
+            <div class="feature">
+                <img src="GymEquipment.png" alt="Gym Equipment Icon">
+                <h3>Gym Equipment</h3>
+                <p>Designed to maximize muscle engagement, improve workout efficiency, and ensure safe, effective training for all fitness levels.</p>
+            </div>
+            <div class="feature">
+                <img src="HealthSupport.png" alt="Health Support Icon">
+                <h3>Health Support</h3>
+                <p>Health support services provide personalized wellness guidance, including nutrition plans, recovery advice, and expert consultations to help you maintain optimal health and achieve long-term fitness goals.</p>
+            </div>
+            <div class="feature">
+                <img src="Community.png" alt="Community Icon">
+                <h3>Community</h3>
+                <p>Community fosters a sense of belonging and motivation, where members support and challenge each other, sharing experiences and celebrating successes.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="customer-support">
+                <h4>Customer Support</h4>
+                <p><a href="#">FAQ</a></p>
+                <p><a href="#">Contact Us</a></p>
+                <p><a href="#">Privacy Policy</a></p>
+            </div>
+            <div class="contact">
+                <h4>Contact Us</h4>
+                <p>Email: info@herculesgym.com</p>
+                <p>Phone: +1 (555) 012-3456</p>
+            </div>
+            <div class="social-media">
+                <h4>Follow Us</h4>
+                <a href="#"><img src="https://thumbs.dreamstime.com/b/facebook-logo-vector-eps-file-squared-coloured-easily-editable-have-white-background-high-resolution-255557233.jpg" alt="Facebook"></a>
+                <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png" alt="Instagram"></a>
+                <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" alt="YouTube"></a>
+                <a href="#"><img src="https://cdn-icons-png.flaticon.com/256/3938/3938028.png" alt="Twitter"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Hercules Gym. All rights reserved.</p>
+            <p>Made by Bernarte, Karl Shane Y.</p>
+        </div>
+    </footer>
+</body>
+</html>

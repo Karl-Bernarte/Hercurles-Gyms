@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Hercules Gym</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: linear-gradient(to bottom right, rgba(255, 0, 0, 0.5), rgba(0, 0, 255, 0.5)), url('https://as2.ftcdn.net/v2/jpg/01/14/45/49/1000_F_114454908_KfdEXCZ2anOmCICqBYEAykckGtMjr241.jpg');
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(to right, #392d69, #b57bee);
+            padding: 10px 20px; 
+            color: #fff;
+        }
+
+        header .logo img {
+            height: 70px; 
+            width: auto; 
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 10px; 
+        }
+
+        nav ul li {
+            margin: 0 5px; 
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 25px; 
+        }
+
+        .join-btn {
+            background-color: #914FDF;
+            color: white;
+            padding: 10px 20px; 
+            border-radius: 20px;
+            text-decoration: none;
+            margin-left: 10px; 
+            font-size: 16px; 
+        }
+
+        .join-btn:hover {
+            background-color: #9b3dff; 
+            transform: translateY(-2px); 
+        }
+
+        main {
+            flex: 1;
+            padding: 50px;
+            text-align: center;
+        }
+
+        .container {
+            background-color: white; 
+            padding: 20px; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+            margin: 0 auto; 
+            max-width: 1000px; 
+        }
+
+        .about-us h2 {
+            font-size: 36px;
+            color: #ffd700;
+            margin-bottom: 20px;
+        }
+
+        .video-section {
+            height: 400px; 
+            overflow: hidden; 
+        }
+
+        .youtube-video {
+            width: 100%; 
+            height: 100%; 
+        }
+
+
+        .about-us p {
+            margin: 20px 0;
+            color: #333;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .logo-image img {
+            width: 300px;
+
+        }
+
+        footer {
+            background-color: #2D2D2D;
+            color: white;
+            padding: 15px; 
+            display: flex;
+            flex-direction: column; 
+            align-items: center;
+            text-align: center; 
+            margin-top: auto; 
+        }
+
+        footer .footer-content {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1200px; 
+            flex-wrap: wrap;
+        }
+
+        footer .customer-support,
+        footer .contact,
+        footer .social-media {
+            width: 30%;
+            margin-bottom: 10px; 
+        }
+
+        footer .social-media a img {
+            width: 25px;
+            margin-right: 10px;
+        }
+
+        footer a {
+            color: white; 
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline; 
+        }
+
+        @media (max-width: 1024px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav ul {
+                flex-direction: column;
+                margin-bottom: 10px;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            footer .footer-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            footer .customer-support,
+            footer .contact,
+            footer .social-media {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            footer .social-media a img {
+                width: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .about-us h2 {
+                font-size: 28px;
+            }
+
+            .about-us p {
+                font-size: 16px;
+            }
+
+            main {
+                padding: 20px;
+            }
+
+            footer {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            footer .footer-content {
+                flex-direction: column;
+            }
+
+            footer .customer-support,
+            footer .contact,
+            footer .social-media {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 10px;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin: 5px 0;
+            }
+
+            .join-btn {
+                padding: 8px 16px;
+                font-size: 14px;
+            }
+
+            .about-us h2 {
+                font-size: 24px;
+            }
+
+            .about-us p {
+                font-size: 14px;
+            }
+
+            footer .social-media a img {
+                width: 20px;
+            }
+
+            .video-section iframe {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="HerculesLogo.png" alt="Hercules Gym Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Hercurles_TrainingProgram.html">Training Program</a></li>
+                <li><a href="Hercurles_WhyJoin.html">Why Join</a></li>
+                <li><a href="Hercurles_AboutUs.html">About Us</a></li>
+            </ul>
+        </nav>
+        <a href="Hercules_JoinUs.html" class="join-btn">JOIN US</a>
+    </header>
+    <main>
+        <div class="container"> 
+            <section class="about-us">
+                <h2>About Hercules</h2>
+                <div class="video-section">
+                    <iframe class="youtube-video" width="560" src="https://www.youtube.com/embed/gDWxswQ-h_o" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <p>
+                    Welcome to Hercules Gym, where fitness meets community. At Hercules, we are dedicated to providing a premier workout experience tailored to your individual needs and goals. Our state-of-the-art equipment, expert trainers, and personalized programs ensure that every member receives the support and resources they need to thrive.
+                </p>
+                <p>
+                    Our mission is to create a welcoming environment where everyone feels empowered to pursue their fitness journey. We believe that a strong community is essential for achieving lasting results, and we are committed to fostering an inclusive atmosphere where support and motivation are at the forefront of every workout.
+                </p>
+                <p>
+                    Whether you're just starting out or are a seasoned athlete, Hercules Gym is here to help you reach your full potential. Join us and be part of a fitness family that celebrates every milestone and encourages you to push beyond your limits. Your journey to a healthier, stronger you begins here.
+                </p>
+                <div class="logo-image">
+                    <img src="HerculesLogo.png" alt="Hercules Gym Logo">
+                </div>
+            </section>            
+        </div> 
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="customer-support">
+                <h4>Customer Support</h4>
+                <p><a href="#">FAQ</a></p>
+                <p><a href="#">Contact Us</a></p>
+                <p><a href="#">Privacy Policy</a></p>
+            </div>
+            <div class="contact">
+                <h4>Contact Us</h4>
+                <p>Email: info@herculesgym.com</p>
+                <p>Phone: +1 (555) 012-3456</p>
+            </div>
+            <div class="social-media">
+                <h4>Follow Us</h4>
+                <a href="#"><img src="https://thumbs.dreamstime.com/b/facebook-logo-vector-eps-file-squared-coloured-easily-editable-have-white-background-high-resolution-255557233.jpg" alt="Facebook"></a>
+                <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png" alt="Instagram"></a>
+                <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" alt="YouTube"></a>
+                <a href="#"><img src="https://cdn-icons-png.flaticon.com/256/3938/3938028.png" alt="Twitter"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Hercules Gym. All rights reserved.</p>
+            <p>Made by Bernarte, Karl Shane Y.</p>
+        </div>
+    </footer>
+</body>
+</html>
